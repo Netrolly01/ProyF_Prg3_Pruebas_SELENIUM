@@ -1,29 +1,30 @@
+Aquí te dejo un ejemplo de cómo podría quedar el README de tu proyecto final, adaptado al enfoque de registrar visitas a una empresa (SGRVE) con pruebas automatizadas:
+
 ---
 
-# 🎯 Proyecto de Automatización con Selenium - Programación III
+# 🎯 Proyecto de Automatización con Selenium - Registro de Visitas (SGRVE)
 
-Este repositorio corresponde a la **Tarea 4** de la materia **Programación III (SDN)**, donde se implementaron pruebas automatizadas para una aplicación web utilizando **Selenium en Python**. El proyecto toma como base un tutorial de YouTube y se gestionó a través de **Azure DevOps**.
+Este repositorio corresponde a **Tarea Final** de la materia **Programación III (SDN)**, donde se implementaron pruebas automatizadas para una aplicación web de **registro de visitas** a una empresa utilizando **Selenium en Python**. El proyecto simula el proceso de registro, edición y eliminación de visitas en el **Sistema de Gestión de Registros de Visitas a Empresas** (SGRVE).
 
 ---
 
 ## 🌟 Objetivo
-Automatizar **5 escenarios distintos** que simulan interacciones reales en la plataforma de [YouTube](https://www.youtube.com), cubriendo desde la búsqueda de un video hasta su reproducción y manipulación visual.
+Automatizar los **escenarios** de registro de visitas, asegurando que la plataforma funcione correctamente, desde la creación hasta la eliminación de registros, a través de pruebas automatizadas con **Selenium**.
 
 ---
 
 ## 📋 Historias de Usuario
-Se documentaron y gestionaron **5 historias de usuario** en **Azure DevOps**, incluyendo:
+Se documentaron y gestionaron **historias de usuario** en **Azure DevOps**, incluyendo:
 
 - ✅ *Criterios de aceptación*
 - ❌ *Criterios de rechazo*
 
 ### 🔁 Escenarios Automatizados
 
-1. 🔍 **Búsqueda de un video**
-2. ▶️ **Reproducir el video**
-3. 🗕 **Minimizar la pantalla del video**
-4. 🖥️ **Pantalla completa del video**
-5. ⏸️ **Pausar el video**
+1. ✍️ **Registrar una nueva visita**
+2. 📝 **Editar los detalles de una visita**
+3. ❌ **Eliminar una visita existente**
+4. 🔍 **Ver detalles de una visita registrada**
 
 ---
 
@@ -40,7 +41,7 @@ Se documentaron y gestionaron **5 historias de usuario** en **Azure DevOps**, in
 
 - 📁 Carpeta `/reportes_pr` con reportes `.html` generados por HTMLTestRunner
 - 🖼️ Carpeta `/fotos_pr` con capturas automáticas generadas por Selenium
-- 🎥 Video demostrativo disponible en [YouTube](https://youtu.be/2jU6S9GC-38)
+- 🎥 Video demostrativo disponible en [YouTube]()
 
 ---
 
@@ -65,5 +66,6 @@ Este repositorio incluye:
 
 ---
 
-> 💡 *Este README fue diseñado para brindar una vista clara, visual y profesional del proyecto de automatización. ¡Personalízalo si lo necesitas!*
+> 💡 *Este README fue diseñado para proporcionar una vista clara y profesional del proyecto de automatización del registro de visitas. ¡Puedes personalizarlo como desees!*
 
+---

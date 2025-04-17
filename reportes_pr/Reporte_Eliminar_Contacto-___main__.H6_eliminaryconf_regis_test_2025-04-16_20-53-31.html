@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Reporte Pausar Video</title>
+    <title>Reporte de Prueba - Eliminar Contacto</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -10,10 +10,10 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-12">
-                <h2 class="text-capitalize">Reporte Pausar Video</h2>
-                <p class='attribute'><strong>Start Time: </strong>2025-04-10 20:08:57</p>
-                <p class='attribute'><strong>Duration: </strong>22.43 s</p>
-                <p class='attribute'><strong>Summary: </strong>Total: 1, Pass: 1</p>
+                <h2 class="text-capitalize">Reporte de Prueba - Eliminar Contacto</h2>
+                <p class='attribute'><strong>Hora de inicio: </strong>2025-04-16 20:33:55</p>
+                <p class='attribute'><strong>DuraciÃ³n: </strong>5.31 s</p>
+                <p class='attribute'><strong>Resumen: </strong>Total: 1, Aprobado: 1</p>
             </div>
         </div>
         <div class="row">
@@ -21,30 +21,24 @@
                 <table class='table table-hover table-responsive'>
                     <thead>
                         <tr>
-                            <th>__main__.H5_pausarv_test</th>
-                            <th>Status</th>
-                            <th></th>
+                            <th>Prueba</th>
+                            <th>Estado</th>
+                            <th>Captura de Pantalla</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr class='success'>
-                            <td class="col-xs-10">test_pausar_video</td>
+                            <td class="col-xs-10">test_eliminar_contacto</td>
                             <td class="col-xs-1">
-                                <span class="label label-success" style="display:block;width:40px;">Pass</span>
+                                <span class="label label-success" style="display:block;width:40px;">Aprobado</span>
                             </td>
                             <td class="col-xs-1">
-                                <button class="btn btn-default btn-xs">View</button>
-                            </td>
-                        </tr>
-                        <tr style="display:none;">
-                            <td class="col-xs-9" colspan="3"><p>No se encontró el botón de cookies
-Video pausado con la tecla 'k'.
-</p>
+                                <img src="fotos_pr/H4_confirmacion_eliminar_contacto_sin_aceptar.png" alt="Captura de pantalla de la alerta" width="200">
                             </td>
                         </tr>
                         <tr>
                             <td colspan="3">
-                                Total: 1, Pass: 1 -- Duration: 22.43 s
+                                Total: 1, Aprobado: 1 -- DuraciÃ³n: 5.31 s
                             </td>
                         </tr>
                     </tbody>
@@ -62,14 +56,14 @@ Video pausado con la tecla 'k'.
                 var $nextRow = $this.closest('tr').next('tr');
                 $nextRow.slideToggle("fast");
                 $this.text(function(i, text){
-                    if (text === 'View') {
-                        return 'Hide';
+                    if (text === 'Ver') {
+                        return 'Ocultar';
                     } else {
-                        return 'View';
+                        return 'Ver';
                     };
                 });
             });
         });
     </script>
 </body>
-</html
+</html>

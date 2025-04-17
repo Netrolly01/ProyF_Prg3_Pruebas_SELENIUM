@@ -6,7 +6,7 @@ import time
 import HtmlTestRunner
 import os
 
-class H1_busqueda_test(unittest.TestCase):
+class H3_insercionDda_test(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
@@ -19,35 +19,35 @@ class H1_busqueda_test(unittest.TestCase):
     def tearDownClass(cls):
         cls.driver.quit()
 
+    def setUp(self):
+        self.driver.get("http://localhost:8001/registro.php")
+        time.sleep(2)
+
     def remove_non_ascii(self, text):
         return ''.join(c for c in text if ord(c) < 128)
 
-    def test_inicio_index(self):
+    def test_insertar_datos_sin_enviar(self):
         try:
-            # Ir al sitio local
-            self.driver.get("http://localhost:8001/index.php")
-            time.sleep(2)
+            # Insertar datos en el formulario (sin enviar)
+            self.driver.find_element(By.NAME, "telefono").send_keys("8294567890")
+            self.driver.find_element(By.NAME, "nombre").send_keys("Laura")
+            self.driver.find_element(By.NAME, "apellido").send_keys("Martínez")
+            self.driver.find_element(By.NAME, "correo_electronico").send_keys("laura.martinez@gmail.com")
+            time.sleep(1)
 
-            titulo = self.driver.title
-            titulo_limpio = self.remove_non_ascii(titulo)
-
-            print("Título de la página (limpio):", titulo_limpio)
-
-            # Captura de pantalla del inicio
+            # Captura de pantalla sin enviar el formulario
             if not os.path.exists("fotos_pr"):
                 os.makedirs("fotos_pr")
-            self.driver.save_screenshot("fotos_pr\\inicio_index.png")
+            self.driver.save_screenshot("fotos_pr\\formulario_llenado.png")
 
         except Exception as e:
-            print("Error al abrir index.php:", str(e))
+            print(f"Error durante la prueba: {str(e)}")
             raise e
 
 if __name__ == '__main__':
     unittest.main(
         testRunner=HtmlTestRunner.HTMLTestRunner(
             output='reportes_pr',
-            report_name='Reporte_Inicio_Proyecto_Personal',
-            report_title='Reporte de prueba - Inicio del sistema',
-            combine_reports=True
+            report_name='Reporte_Formulario_Llenado'
         )
     )

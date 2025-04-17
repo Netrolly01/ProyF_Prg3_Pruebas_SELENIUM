@@ -6,7 +6,7 @@ import time
 import HtmlTestRunner
 import os
 
-class H1_busqueda_test(unittest.TestCase):
+class H1_inicio_index_test(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
@@ -25,7 +25,7 @@ class H1_busqueda_test(unittest.TestCase):
     def test_inicio_index(self):
         try:
             # Ir al sitio local
-            self.driver.get("http://localhost:8001/index.php")
+            self.driver.get("http://localhost:8001/listadeVis.php")
             time.sleep(2)
 
             titulo = self.driver.title
@@ -33,10 +33,10 @@ class H1_busqueda_test(unittest.TestCase):
 
             print("Título de la página (limpio):", titulo_limpio)
 
-            # Captura de pantalla del inicio
+            # Captura de pantalla del listado de datos eliminados
             if not os.path.exists("fotos_pr"):
                 os.makedirs("fotos_pr")
-            self.driver.save_screenshot("fotos_pr\\inicio_index.png")
+            self.driver.save_screenshot("fotos_pr\\listados_vacio.png")
 
         except Exception as e:
             print("Error al abrir index.php:", str(e))
@@ -46,8 +46,8 @@ if __name__ == '__main__':
     unittest.main(
         testRunner=HtmlTestRunner.HTMLTestRunner(
             output='reportes_pr',
-            report_name='Reporte_Inicio_Proyecto_Personal',
-            report_title='Reporte de prueba - Inicio del sistema',
+            report_name='Reporte_Listado_Vacio_Proyecto_Personal',
+            report_title='Reporte de prueba - Listado Vacio del sistema',
             combine_reports=True
         )
     )
